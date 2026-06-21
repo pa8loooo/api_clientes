@@ -75,7 +75,7 @@ Navegador
      │ /    → /usr/share/nginx/html (frontend estático)
      ▼
 ┌─────────┐       ┌─────────┐
-│   API   │──────▶│  MySQL  │
+│   API   │ ----->│  MySQL  │
 │ Flask   │ :3306 │  :3306  │
 │ :5000   │       │         │
 └─────────┘       └─────────┘
@@ -87,7 +87,7 @@ Navegador
 
 | Container | Imagem            | Porta interna | Porta host | Função               |
 |-----------|-------------------|---------------|------------|----------------------|
-| nginx     | nginx:1.25-alpine | 80            | 80         | Proxy reverso + front|
+| nginx     | nginx:1.25-alpine | 80            | 8080       | Proxy reverso + front|
 | api       | (build local)     | 5000          | —          | API REST Python      |
 | mysql     | mysql:8.0         | 3306          | —          | Banco de dados       |
 
